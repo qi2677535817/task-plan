@@ -1,0 +1,148 @@
+// ============================================================
+// uni.scss - TaskPlan 设计系统 v5
+// 风格：暖米白手账 · 大地色 · 无阴影
+// 字体：Playfair Display（标题）+ Nunito（正文）
+// ============================================================
+
+/* ============================
+       色彩系统 · 大地色暖调
+   ============================ */
+
+// ---- 背景色 ----
+$bg-main:       #F5F0E8 !default;    // 主页面 - 暖米白
+$bg-soft:       #F0EAE0 !default;    // 次背景 - 暖灰
+$bg-surface:    rgba(255, 252, 246, 0.70) !default;  // 卡片 - 半透明暖白
+$bg-elevated:   rgba(255, 252, 246, 0.85) !default;  // 升高卡片
+$bg-subtle:     rgba(192, 150, 104, 0.08) !default;  // 轻微暖色底
+
+// ---- 品牌主色（大地色系）----
+$brand-primary:  #C67C4E !default;   // 赭石橙 - 主品牌
+$brand-secondary:#7A9C6B !default;   // 苔藓绿 - 次品牌
+$brand-accent:   #A0522D !default;   // 陶土棕 - 强调
+$brand-gradient: linear-gradient(135deg, #C67C4E, #7A9C6B) !default; // 琥珀→苔藓
+
+// ---- 优先级色阶（P5最高 ~ P1最低）----
+$priority-5:    #C67C4E !default;    // 赭石橙    - 最高（温暖醒目）
+$priority-4:    #D4956B !default;    // 浅赭石    - 高
+$priority-3:    #7A9C6B !default;    // 苔藓绿    - 中
+$priority-2:    #9EAD7A !default;    // 鼠尾草    - 低
+$priority-1:    #C5BAA5 !default;    // 暖米灰    - 最低（淡雅）
+
+// ---- 优先级背景色（半透暖底）----
+$priority-bg-5: rgba(198, 124, 78, 0.10) !default;
+$priority-bg-4: rgba(212, 149, 107, 0.08) !default;
+$priority-bg-3: rgba(122, 156, 107, 0.08) !default;
+$priority-bg-2: rgba(158, 173, 122, 0.06) !default;
+$priority-bg-1: rgba(197, 186, 165, 0.05) !default;
+
+// ---- 文本色（暖棕系 · 禁止纯黑）----
+$text-primary:   #3D3529 !default;   // 主文本 - 深暖棕
+$text-secondary: #6B5D49 !default;   // 次要文本 - 中暖棕
+$text-muted:     #948572 !default;   // 弱化 - 浅暖棕
+$text-dim:       #B5A792 !default;   // 极弱 - 极浅暖棕
+
+// ---- 功能色（大地色系延伸）----
+$success:        #7A9C6B !default;   // 完成 - 苔藓绿
+$warning:        #C68E4E !default;   // 警告 - 琥珀
+$danger:         #C67C4E !default;   // 危险 - 赭石橙
+$info:           #7A9C6B !default;   // 信息 - 苔藓绿
+
+// ---- 边框/分割线 ----
+$border-subtle:  #E5DDD2 !default;   // 极浅边框
+$border-default: #D5CCBD !default;   // 标准边框（1px细线）
+$border-strong:  #C2B6A4 !default;   // 强边框
+
+/* ============================
+       间距系统
+   ============================ */
+$spacing-xs:   4px;
+$spacing-sm:   8px;
+$spacing-md:   12px;
+$spacing-lg:   16px;
+$spacing-xl:   20px;
+$spacing-2xl:  24px;
+$spacing-3xl:  32px;
+$spacing-4xl:  40px;
+
+/* ============================
+       圆角系统（柔和圆角）
+   ============================ */
+$radius-none:  0;
+$radius-sm:    6px;
+$radius-md:    10px;
+$radius-lg:    14px;
+$radius-xl:    18px;
+$radius-2xl:   22px;
+$radius-full:  9999px;
+
+/* ============================
+       字体系统
+   ============================ */
+$font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-body:    'Nunito', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$font-mono:    'SF Mono', 'Fira Code', monospace;
+
+// 字号
+$text-2xs:  10px;
+$text-xs:   11px;
+$text-sm:   12px;
+$text-base: 14px;
+$text-lg:   16px;
+$text-xl:   18px;
+$text-2xl:  22px;
+$text-3xl:  28px;
+
+/* ============================
+       阴影系统（全部禁用）
+   ============================ */
+// 按设计规范：无阴影
+// 保持变量但不赋值，仅作占位不生效
+$shadow-sm:  none;
+$shadow-md:  none;
+$shadow-lg:  none;
+
+/* ============================
+       混入 - 卡片基础（手账风）
+   ============================ */
+@mixin card-base {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $radius-sm;
+  box-shadow: none;  // 无阴影
+  backdrop-filter: blur(2px);
+}
+
+@mixin card-elevated {
+  background: $bg-elevated;
+  border: 1px solid $border-default;
+  border-radius: $radius-sm;
+  box-shadow: none;
+  backdrop-filter: blur(4px);
+}
+
+/* ============================
+       混入 - 优先级左侧指示条
+   ============================ */
+@mixin priority-bar($color) {
+  border-left: 3px solid $color;
+}
+
+/* ============================
+       混入 - 布局助手
+   ============================ */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}

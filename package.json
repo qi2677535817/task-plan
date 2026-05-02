@@ -1,0 +1,29 @@
+{
+  "name": "task-plan",
+  "version": "1.0.0",
+  "description": "TaskPlan 七日任务规划 App - 纯本地轻量化任务管理",
+  "private": true,
+  "scripts": {
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "dev:h5": "uni",
+    "dev:app": "uni -p app",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "build:h5": "uni build",
+    "build:app": "uni build -p app"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-alpha-5000820260430001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-5000820260430001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5000820260430001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-5000820260430001",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-5000820260430001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5000820260430001",
+    "sass": "1.76.0",
+    "sass-loader": "13.3.2",
+    "vite": "5.2.8"
+  }
+}

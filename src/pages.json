@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F0E8",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/hidden/hidden",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F0E8"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#F5F0E8",
+    "backgroundColorContent": "#F5F0E8",
+    "app-plus": {
+      "background": "#F5F0E8",
+      "scrollIndicator": "none"
+    }
+  },
+  "tabBar": {
+    "color": "#A09080",
+    "selectedColor": "#C67C4E",
+    "backgroundColor": "#F8F4EE",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "任务",
+        "iconPath": "static/tabbars/task.png",
+        "selectedIconPath": "static/tabbars/task-active.png"
+      },
+      {
+        "pagePath": "pages/hidden/hidden",
+        "text": "完成",
+        "iconPath": "static/tabbars/hidden.png",
+        "selectedIconPath": "static/tabbars/hidden-active.png"
+      }
+    ]
+  }
+}
